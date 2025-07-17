@@ -1,1 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
+
+body.light-theme {
+  background-image: url('./asset/bg.jpg');
+  background-size: cover;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+  background-repeat: no-repeat;
+  height:100vh;
+}
+
+body.dark-theme {
+  background-image: url('./asset/ng1.jpg') !important;
+  background-size: cover;
+  color: #f1f1f1;
+  transition: background 0.3s, color 0.3s;
+  background-repeat: no-repeat;
+  height:100vh;
+}
+.weather-card {
+  border-radius: 1rem;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  transition: background 0.3s, color 0.3s;
+}
+body.dark-theme .weather-card {
+  background: rgba(34, 40, 49, 0.98);
+  color: #f1f1f1;
+}
+.weather-result .display-4 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.weather-result .lead {
+  font-size: 1.25rem;
+}
+.recent-searches {
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  transition: background 0.3s, color 0.3s;
+}
+body.dark-theme .recent-searches {
+  background: #232a36;
+  color: #f1f1f1;
+}
+.recent-searches .badge {
+  font-size: 1rem;
+  background: linear-gradient(90deg, #6c757d 60%, #adb5bd 100%);
+  color: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.3s, color 0.3s;
+}
+body.dark-theme .recent-searches .badge {
+  background: linear-gradient(90deg, #232a36 60%, #3a4250 100%);
+  color: #f1f1f1;
+}
+.recent-searches .badge i {
+  font-size: 1.1em;
+}
+@media (max-width: 767px) {
+  .weather-card {
+    margin: 0 0.5rem;
+  }
+  .weather-result .display-4 {
+    font-size: 2rem;
+  }
+  .recent-searches .badge {
+    font-size: 0.95rem;
+    padding: 0.5em 1em;
+  }
+}
